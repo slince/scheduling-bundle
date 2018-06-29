@@ -1,0 +1,25 @@
+services:
+    scheduling.command.run:
+         class: Crunz\Console\Command\ScheduleRunCommand
+         tags:
+            - { name: 'console.command'}
+
+    scheduling.command.list:
+         class: Crunz\Console\Command\ScheduleListCommand
+         tags:
+            - { name: 'console.command'}
+
+    scheduling.command.task_generator:
+         class: Crunz\Console\Command\TaskGeneratorCommand
+         tags:
+            - { name: 'console.command'}
+
+    scheduling.command.config_generator:
+         class: Crunz\Console\Command\ConfigGeneratorCommand
+         tags:
+            - { name: 'console.command'}
+
+    scheduling.command.closure_run:
+         class: Crunz\Console\Command\ClosureRunCommand
+         tags:
+            - { name: 'console.command'}
