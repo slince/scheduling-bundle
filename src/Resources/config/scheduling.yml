@@ -1,1 +1,7 @@
 services:
+    _defaults:
+         autowire: true
+         public: false
+
+    sheduling.schedule_builder:
+       class: Slince\SchedulingBundle\Scheduling\ScheduleBuilder

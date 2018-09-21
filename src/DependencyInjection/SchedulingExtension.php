@@ -31,4 +31,13 @@ class SchedulingExtension extends Extension
         $loader->load('commands.yml');
         $loader->load('scheduling.yml');
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAlias()
+    {
+        return 'scheduling';
+    }
+
 }

@@ -11,8 +11,19 @@
 
 namespace Slince\SchedulingBundle;
 
+use Slince\SchedulingBundle\DependencyInjection\SchedulingExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class SchedulingBundle extends Bundle
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function getContainerExtension()
+    {
+        if (null === $this->extension) {
+            $this->extension = new SchedulingExtension();
+        }
+        return $this->extension;
+    }
 }
